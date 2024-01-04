@@ -1,0 +1,15 @@
+  <ng-container [ngSwitch]="question.type">
+    <mat-card>
+      <app-three-buttons  *ngSwitchCase="'three_buttons'" [title]='question.displayText' [options]="question.choiceOptions" (valueChange)="buttonListener(section!.sectionOccurrenceId + ':'+ question.id, $event)"></app-three-buttons>
+      <app-radio          *ngSwitchCase="'radio'" [title]='question.displayText' [options]="question.choiceOptions" (valueChange)="buttonListener(section!.sectionOccurrenceId + ':'+ question.id, $event)"></app-radio>
+      <app-dropdown-question *ngSwitchCase="'dropdown'"   [title]='question.displayText' [options]="question.choiceOptions" (valueChange)="buttonListener(section!.sectionOccurrenceId + ':'+ question.id, $event)"></app-dropdown-question>
+      <app-number-question *ngSwitchCase="'number'"   [title]='question.displayText' (valueChange)="buttonListener(section!.sectionOccurrenceId + ':'+ question.id, $event)"></app-number-question>
+  </mat-card>
+
+  <ng-container *ngIf="question.dependentQuestion">
+    <ng-container *ngFor="let dQuestion of question.dependentQuestion">
+      <app-question-factory [question]="dQuestion" [section]="section"></app-question-factory>
+    </ng-container>
+  </ng-container>
+
+</ng-container>

@@ -3,10 +3,9 @@
   <label for="options">Select an option:</label>
   
   <select name="options" id="options" (change)="setValue($event)">
-    <option  value="OPTION1">OPTION1</option>
-    <option  value="OPTION2">OPTION2</option>
-    <option  value="OPTION3">OPTION3</option>
-    <option  value="OPTION4">OPTION4</option>
+    <ng-container *ngFor="let option of options">
+      <option  [value]="option.value">{{option.label}}</option>
+    </ng-container>
   </select>
 </div>
 

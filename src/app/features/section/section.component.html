@@ -3,23 +3,21 @@
     <mat-expansion-panel-header>
       <mat-panel-title>
         <span class="index-span">{{index + 1}}</span>
-       <span class="name-span">{{section!.name}}</span>
       </mat-panel-title>
       <mat-panel-description>
-        {{section!.answeredQuestions}} /
-        {{section!.totalQuestions}} 
+        <div class="section-info">
+
+          <span class="name-span">{{section!.name}}</span>
+          <div class="questions-info">
+            {{section!.answeredQuestions}} /
+            {{section!.totalQuestions}} 
+          </div>
+        </div>
 
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <mat-card>
-      <app-three-buttons title='Question Title' (valueChange)="buttonListener('3Btn', $event)"></app-three-buttons>
-  </mat-card>
-    <mat-card>
-      <app-radio title="Pregunta checkbox" [options]="options" (valueChange)="buttonListener('radio', $event)"></app-radio>
-  </mat-card>
-    <mat-card>
-      <app-dropdown-question title="Pregunta dropdown" (valueChange)="buttonListener('dropdown', $event)"></app-dropdown-question>
-  </mat-card>
-
+      <ng-container *ngFor="let question of questions">
+        <app-question-factory [question]="question" [section]="section"></app-question-factory>
+      </ng-container>
   </mat-expansion-panel>
 </mat-accordion>

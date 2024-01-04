@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DropdownQuestionComponent } from './components/questions/dropdown-question/dropdown-question.component';
 import { ThreeButtonsComponent } from './components/questions/three-buttons/three-buttons.component';
 import { RadioComponent } from './components/questions/radio/radio.component';
+import { QuestionFactoryComponent } from './components/questions/question-factory/question-factory.component';
+import { NumberQuestionComponent } from './components/questions/number-question/number-question.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,11 +24,14 @@ import { RadioComponent } from './components/questions/radio/radio.component';
     QuestionComponent,
     DropdownQuestionComponent,
     ThreeButtonsComponent,
-    RadioComponent
+    RadioComponent,
+    QuestionFactoryComponent,
+    NumberQuestionComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MatExpansionModule,
     MatToolbarModule,
     MatCardModule 

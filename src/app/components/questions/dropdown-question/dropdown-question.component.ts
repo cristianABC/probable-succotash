@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Options } from '../interfaces/options.interface';
 
 type DropwdownOptions = EventTarget | null;
 
@@ -19,6 +20,7 @@ export class DropdownQuestionComponent implements OnChanges, ControlValueAccesso
   
   @Input() title:string = '';
   @Input() value: DropwdownOptions = null;
+  @Input() options: Options[] = [];
   @Output() valueChange = new EventEmitter<DropwdownOptions>();
   onChange: (newValue: DropwdownOptions) => void = () => {};
   
@@ -43,9 +45,5 @@ export class DropdownQuestionComponent implements OnChanges, ControlValueAccesso
     this.value = value.target.value;
     this.onChange(this.value);
     this.valueChange.emit(this.value);
-  }
-
-  logTest(value:any){
-    console.log(value.target.value);
   }
 }

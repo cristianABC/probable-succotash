@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Options } from '../interfaces/options.interface';
 
-type ThreeButtonOptions = 'true' | 'false' | 'Cannot do it' | null;
-
+type ThreeButtonOptions = string | null;
 
 @Component({
   selector: 'app-three-buttons',
@@ -20,6 +20,7 @@ export class ThreeButtonsComponent implements  OnChanges, ControlValueAccessor {
   
   @Input() title: string = '';
   @Input() value: ThreeButtonOptions = null;
+  @Input() options: Options[] = [];
   @Output() valueChange = new EventEmitter<ThreeButtonOptions>();
   onChange: (newValue: ThreeButtonOptions) => void = () => {};
   

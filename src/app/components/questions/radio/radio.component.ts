@@ -1,13 +1,8 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Options } from '../interfaces/options.interface';
 
 type RadioOptions = string | null;
-export interface Options {
-  id:string;
-  label: string;
-  value: string;
-}
-
 
 @Component({
   selector: 'app-radio',

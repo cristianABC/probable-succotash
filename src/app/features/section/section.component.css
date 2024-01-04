@@ -1,24 +1,43 @@
 mat-expansion-panel {
- background-color: #F0F0F0;
+ background-color: #444444;
+ text-transform: uppercase;
+ padding: 10px;
+}
+.mat-expanded {
+  background-color: white;
 }
 mat-card {
   margin-bottom: 10px;
 }
 
+mat-panel-title {
+  color:white;
+}
+
+
 .name-span {
   font-size: 1rem;
   padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
   }
 .index-span{ 
     font-size: 1rem;
     font-weight: bold;
     padding: 50px;
-    background-color: #444444;
+    background-color: #7F8AA0;
     color: white;
 }
 
 mat-panel-description {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.section-info {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

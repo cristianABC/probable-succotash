@@ -59,7 +59,7 @@ const questions = [
             "id": "61c8226c1b5c2590869cc802604bcba3",
             "label": "OPTION4",
             "value": "OPTION4"
-        }
+        },
     ],
     "response": "OPTION1",
     "responseLabel": "OPTION1",
