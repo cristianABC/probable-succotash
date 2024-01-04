@@ -1,0 +1,7 @@
+<h3>Question Title</h3>
+
+<ul class="three_buttons">
+  <li [ngClass]="{active: value==='true'}" (click)="setValue('true')">Acceptable</li>
+  <li [ngClass]="{active: value==='false'}" (click)="setValue('false')">Not Acceptable</li>
+  <li [ngClass]="{active: value==='Cannot do it'}" (click)="setValue('Cannot do it')">Not Verified</li>
+</ul>

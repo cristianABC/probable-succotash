@@ -1,0 +1,24 @@
+mat-expansion-panel {
+ background-color: #F0F0F0;
+}
+mat-card {
+  margin-bottom: 10px;
+}
+
+.name-span {
+  font-size: 1rem;
+  padding: 10px;
+  }
+.index-span{ 
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 50px;
+    background-color: #444444;
+    color: white;
+}
+
+mat-panel-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

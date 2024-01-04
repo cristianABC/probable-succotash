@@ -1,0 +1,19 @@
+mat-toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444444;
+  color: white;
+}
+mat-toolbar span {
+  text-transform: uppercase;
+}
+
+main {
+  padding: 1rem;
+}
+
+app-section{
+  margin: 1rem;
+}

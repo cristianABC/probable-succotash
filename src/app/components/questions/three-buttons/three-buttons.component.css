@@ -1,0 +1,26 @@
+:host {
+  width: 100%;
+}
+
+.three_buttons {
+  list-style: none;
+  box-sizing: border-box;
+  margin-left: 0;
+  padding: 0;
+  
+}
+.three_buttons li{
+ border: 1px solid #A1C6EC;
+ color: #5a6fe6;
+ font-weight: 500;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 10px;
+ margin-bottom: 10px ;
+ padding: 1rem;
+ cursor: pointer;
+}
+.active {
+  background-color: #b4d2f0;
+}

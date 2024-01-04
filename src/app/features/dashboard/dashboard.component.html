@@ -1,0 +1,11 @@
+<mat-toolbar>
+  <span>Test App</span>
+</mat-toolbar>
+
+
+<main>
+ <ng-container *ngFor="let section of sections;let indexOfElement=index">
+  <app-section [section]="section" [index]="indexOfElement"></app-section>
+ </ng-container>
+
+</main>
